@@ -130,6 +130,7 @@
                                 <option value="si">Si</option>
                                 <option value="no">No</option>
                                 <option value="poco">Poco</option>
+                                <option value="ni">Sin Información</option>
                             </select>
                         </div>
                         <div class="form-group input-group">
@@ -138,6 +139,7 @@
                                 <option value="si">Si</option>
                                 <option value="no">No</option>
                                 <option value="poco">Poco</option>
+                                <option value="ni">Sin Información</option>
                             </select>
                         </div>
                         <div class="form-group input-group">
@@ -146,6 +148,7 @@
                                 <option value="si">Si</option>
                                 <option value="no">No</option>
                                 <option value="poco">Poco</option>
+                                <option value="ni">Sin Información</option>
                             </select>
                         </div>
                         <div class="form-group input-group">

@@ -132,13 +132,22 @@
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>';
                                         break;
                                         case 'no':
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
-                                        echo '<option value="poco">Poco</option>'; 
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>'; 
                                         break;
                                         case 'poco':
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="no">No</option>';
+                                        echo '<option value="si">Si</option>';
+                                        echo '<option value="ni">Sin Información</option>';
+                                        break;
+                                        case 'ni':
+                                        echo '<option value="ni">Sin Información</option>';
                                         echo '<option value="poco">Poco</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
@@ -157,13 +166,22 @@
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>';
                                         break;
                                         case 'no':
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
-                                        echo '<option value="poco">Poco</option>'; 
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>'; 
                                         break;
                                         case 'poco':
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="no">No</option>';
+                                        echo '<option value="si">Si</option>';
+                                        echo '<option value="ni">Sin Información</option>';
+                                        break;
+                                        case 'ni':
+                                        echo '<option value="ni">Sin Información</option>';
                                         echo '<option value="poco">Poco</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
@@ -182,13 +200,22 @@
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>';
                                         break;
                                         case 'no':
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
-                                        echo '<option value="poco">Poco</option>'; 
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="ni">Sin Información</option>'; 
                                         break;
                                         case 'poco':
+                                        echo '<option value="poco">Poco</option>';
+                                        echo '<option value="no">No</option>';
+                                        echo '<option value="si">Si</option>';
+                                        echo '<option value="ni">Sin Información</option>';
+                                        break;
+                                        case 'ni':
+                                        echo '<option value="ni">Sin Información</option>';
                                         echo '<option value="poco">Poco</option>';
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';

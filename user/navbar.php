@@ -24,17 +24,6 @@
                             <a href="index.php"><i class="fa fa-home fa-fw"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Parametros<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="sector.php"> <i class="fa fa-map"></i> Sector</a>
-                                </li>
-                                <li>
-                                    <a href="territorio.php"> <i class="fa fa-map"></i> Territorio</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-users fa-fw"></i> Amos de Casa<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>

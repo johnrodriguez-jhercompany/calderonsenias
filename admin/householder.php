@@ -47,7 +47,7 @@
 								?>
 							</td>
 							<td><?php  $id_territorio=$cqrow['id_territorio']; 
-										$tname=mysqli_query($conn,"select territorio_name from territorio where id_sector='$id_territorio'");
+										$tname=mysqli_query($conn,"select territorio_name from territorio where id_territorio='$id_territorio'");
 										$territorioname=mysqli_fetch_array($tname);
 										echo $territorioname['territorio_name'];
 								?>
