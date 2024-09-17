@@ -30,7 +30,7 @@
     	$location="";
 		$newname="";
 		mysqli_query($conn,"insert into householder (id_sector,codigo,name, last_name, date_birth,phone,sordera,lee,vocalize,sign_language,observation,direccion,id_territorio,img,link_address) values 
-		('$sector','$codigo','$name', '$last_name', '$year_birth', '$phone', '$sordera', '$read', '$vocalize', '$sign_language', '$observation', '$direccion', '$territorio', '$img','$link_address')");
+		('$sector','$codigo','$name', '$last_name', '$year_birth', '$phone', '$sordera', '$read', '$vocalize', '$sign_language', '$observation', '$direccion', '$territorio', '','$link_address')");
 		
 		$id_change = mysqli_insert_id($conn);
 
@@ -38,7 +38,7 @@
 
 		echo "<script>
 					window.alert('Amo de Casa agregado');
-					window.history.back();
+					window.location.href = 'householder.php';
 			  </script>";
 	}
 	else{
@@ -109,7 +109,7 @@
 				
 				echo "<script>
 							window.alert('Amo de casa agregado');
-							window.history.back();
+							window.location.href = 'householder.php';
 						</script>";
 
 			}
@@ -117,7 +117,7 @@
 
 					echo "<script>
 							window.alert('La imagen tiene que tener formato JPG, JPEG o PNG');
-							window.history.back();
+							window.location.href = 'householder.php';
 						</script>";
 				}
 		}

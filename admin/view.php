@@ -52,10 +52,15 @@
 					<div class="col-lg-6">
         				<label>Edad:</label>
         				<span><?php $fecha = $rowsql['date_birth'];
-									$ano = explode("-", $fecha)[0]; // Obtén solo el año de la fecha de nacimiento
-									$ano_actual = date("Y"); // Obtén el año actual
-									$edad = $ano_actual - $ano; // Calcula la edad
-									echo $edad; ?>
+									if(!empty($fecha)){
+										$ano = explode("-", $fecha)[0]; // Obtén solo el año de la fecha de nacimiento
+										$ano_actual = date("Y"); // Obtén el año actual
+										$edad = $ano_actual - $ano; // Calcula la edad
+										echo $edad;
+									}else{
+										echo "SIN INFORMACION";
+									}
+									 ?>
 						</span>
         			</div>
 					<div class="col-lg-6">	
