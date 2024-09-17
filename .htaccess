@@ -1,0 +1,7 @@
+php_value upload_max_filesize 10M
+php_value memory_limit 500M
+php_value max_execution_time 300
+
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
