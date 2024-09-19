@@ -48,7 +48,7 @@ while ($row = $result->fetch_assoc()) {
     $pdf->Cell(90, 8, 'Sector: ', 1, 0,'C');
     $pdf->Cell(90, 8, utf8_decode('Dirección exacta: '), 1, 1,'C');
     $pdf->Cell(90, 15, $row['sector_name'], 1, 0,'C');
-    $pdf->Cell(90, 15, $row['direccion'], 1, 1,'C');
+    $pdf->MultiCell(90, 15, $row['direccion'], 1, 1,'C');
     $pdf->Cell(120, 8, 'Tipo de Sordera: ', 1, 0,'C');
     $pdf->Cell(60, 8, utf8_decode('Código QR: '), 1, 1,'C');
     $pdf->Cell(120, 8, $row['sordera'], 1, 1,'C');
