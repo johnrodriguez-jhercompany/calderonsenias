@@ -1,4 +1,4 @@
-<!-- Delete publisher -->
+<!-- Delete householder -->
     <div class="modal fade" id="del_<?php echo $cqrow['id_householder']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -27,7 +27,7 @@
     </div>
 <!-- /.modal -->
 
-<!-- Edit publisher -->
+<!-- Edit householder -->
     <div class="modal fade" id="edit_<?php echo $cqrow['id_householder']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -128,6 +128,13 @@
                             <select style="width: 400px;" class="form-control" name="lee">
                                 <?php
                                     switch($b['lee']){
+                                        
+                                        case 'ni':
+                                            echo '<option value="ni">Sin Información</option>';
+                                            echo '<option value="poco">Poco</option>';
+                                            echo '<option value="no">No</option>';
+                                            echo '<option value="si">Si</option>';
+                                            break;
                                         case 'si': 
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
@@ -145,12 +152,6 @@
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="ni">Sin Información</option>';
-                                        break;
-                                        case 'ni':
-                                        echo '<option value="ni">Sin Información</option>';
-                                        echo '<option value="poco">Poco</option>';
-                                        echo '<option value="no">No</option>';
-                                        echo '<option value="si">Si</option>';
                                         break;
                                     }
                                 ?>
@@ -162,6 +163,12 @@
                             <select style="width: 400px;" class="form-control" name="vocalize">
                                 <?php
                                     switch($b['vocalize']){
+                                        case 'ni':
+                                            echo '<option value="ni">Sin Información</option>';
+                                            echo '<option value="poco">Poco</option>';
+                                            echo '<option value="no">No</option>';
+                                            echo '<option value="si">Si</option>';
+                                            break;
                                         case 'si': 
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
@@ -180,12 +187,7 @@
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="ni">Sin Información</option>';
                                         break;
-                                        case 'ni':
-                                        echo '<option value="ni">Sin Información</option>';
-                                        echo '<option value="poco">Poco</option>';
-                                        echo '<option value="no">No</option>';
-                                        echo '<option value="si">Si</option>';
-                                        break;
+                                        
                                     }
                                 ?>
                             </select>
@@ -196,6 +198,12 @@
                             <select style="width: 400px;" class="form-control" name="sign_language">
                                 <?php
                                     switch($b['sign_language']){
+                                        case 'ni':
+                                            echo '<option value="ni">Sin Información</option>';
+                                            echo '<option value="poco">Poco</option>';
+                                            echo '<option value="no">No</option>';
+                                            echo '<option value="si">Si</option>';
+                                            break;
                                         case 'si': 
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="no">No</option>';
@@ -213,12 +221,6 @@
                                         echo '<option value="no">No</option>';
                                         echo '<option value="si">Si</option>';
                                         echo '<option value="ni">Sin Información</option>';
-                                        break;
-                                        case 'ni':
-                                        echo '<option value="ni">Sin Información</option>';
-                                        echo '<option value="poco">Poco</option>';
-                                        echo '<option value="no">No</option>';
-                                        echo '<option value="si">Si</option>';
                                         break;
                                     }
                                 ?>
