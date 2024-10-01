@@ -8,12 +8,195 @@
     <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
    
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
         });
+
+        
+
+        // Inicializar DataTables con tus opciones personalizadas
+    var table = $('#houseTable').DataTable({
+        "bLengthChange": true,
+        "bInfo": true,
+        "bPaginate": true,
+        "bFilter": true,
+        "bSort": true,
+        "pageLength": 7,
+        "language": {
+            "paginate": {
+                "previous": "Anterior",
+                "next": "Siguiente"
+            },
+            "lengthMenu": "Mostrar _MENU_ registros por página",
+            "zeroRecords": "No se encontraron registros",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros disponibles",
+            "infoFiltered": "(filtrado de _MAX_ registros en total)",
+            "search": "Buscar:"
+        }
+    });
+
+    // Filtro por Sector
+    $('#sectorFilter').on('change', function() {
+        table.column(3).search(this.value).draw();  // La columna 3 es la del sector
+    });
+
+
+        $('#pubTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+    
+    
+    
+    
+	    $('#visitTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+	    $('#sectorTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+	    $('#territorioTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+	    $('#studyTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+	    $('#assignmentTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+    
+	    $('#assignadoTable').DataTable({
+	    "bLengthChange": true,
+	    "bInfo": true,
+	    "bPaginate": true,
+	    "bFilter": true,
+	    "bSort": true,
+	    "pageLength": 7,
+        "language": {
+		    	"paginate": {
+		    		"previous": "Anterior",
+		    		"next": "Siguiente"
+		    	},
+		    	"lengthMenu": "Mostrar _MENU_ registros por página",
+		    	"zeroRecords": "No se encontraron registros",
+		    	"info": "Mostrando página _PAGE_ de _PAGES_",
+		    	"infoEmpty": "No hay registros disponibles",
+		    	"infoFiltered": "(filtrado de _MAX_ registros en total)",
+		    	"search": "Buscar:"
+		    }
+	    });
+
     });
 
     /*** Territorio con variable del sector para escoger territorio */

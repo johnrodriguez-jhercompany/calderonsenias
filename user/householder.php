@@ -15,6 +15,22 @@
 			</h1>
         </div>
     </div>
+	<!-- Filtros para buscar por sector y territorio -->
+	<div class="row">
+	    <div class="col-md-6">
+	        <label for="sectorFilter">Filtrar por Sector:</label>
+	        <select id="sectorFilter" class="form-control">
+	            <option value="">Todos los sectores</option>
+	            <?php
+	            $sectores = mysqli_query($conn, "SELECT * FROM sector");
+	            while ($row = mysqli_fetch_assoc($sectores)) {
+	                echo "<option value='".$row['sector_name']."'>".$row['sector_name']."</option>";
+	            }
+	            ?>
+	        </select>
+	    </div>
+		
+	</div>
     <div class="row">
         <div class="col-lg-12">
             <table width="100%" class="table table-striped table-bordered table-hover" id="houseTable">
@@ -24,7 +40,6 @@
 						<th>Tipo de sordera</th>
 						<th>Sector</th>
 						<th>Territorio</th>
-                        <th>Dirección</th>
 						<th>Edad</th>
 						<th>Action</th>
                     </tr>
@@ -47,12 +62,11 @@
 								?>
 							</td>
 							<td><?php  $id_territorio=$cqrow['id_territorio']; 
-										$tname=mysqli_query($conn,"select territorio_name from territorio where id_sector='$id_territorio'");
+										$tname=mysqli_query($conn,"select territorio_name from territorio where id_territorio='$id_territorio'");
 										$territorioname=mysqli_fetch_array($tname);
 										echo $territorioname['territorio_name'];
 								?>
 							</td>
-							<td><?php echo $cqrow['direccion']; ?></td>
 							<td><?php
 							$fecha = $cqrow['date_birth'];
 							if(!empty($fecha)){

@@ -88,21 +88,65 @@ while ($row = $result->fetch_assoc()) {
         $pdf->Image('../img/photo.jpg', 140, $yPosition, 45, 45);
     }
     $pdf->Ln(30); // Espacio después de la imagen
+
+    $sectorName = $row['sector_name'];
     
     $tableCount++;
 }
 
 
-// Cerrar la conexión a la base de datos
-$conn->close();
+
     
 
 // Agregar una imagen
 /*
 $pdf->Image('../img/photo.jpg', 10, $pdf->GetY() + 10, 30);
 */
+// Guardar el PDF en el servidor con el nombre especificado
+// Preparar la consulta
+$sql1 = "SELECT user.username, user.last_name
+        FROM assignment
+        JOIN user ON assignment.id_user = user.id_user
+        WHERE assignment.id_assignment = ?";
 
+$stmt1 = $conn->prepare($sql1);
+$stmt1->bind_param('i', $idAssignment); // Asumiendo que el id_assignment es un entero
+$stmt1->execute();
+$result1 = $stmt1->get_result();
+//aqui el nombre del archivo
+// Obtener solo una fila
+if ($row1 = $result1->fetch_assoc()) {
+    $pdfName = $row1['username']. '' . $row1['last_name'] . '' . $sectorName . '.pdf'; // Nombre del archivo
+}
+
+
+
+$pdfPath = '../pdfs/' . $pdfName; // Ruta donde se guardará el PDF
+
+$pdf->Output('F', $pdfPath); // Guardar el PDF en el servidor
 $pdf->Output('D', 'document.pdf');
+    
+    // Generar URL para compartir el PDF
+    //$serverUrl = 'https://your-domain.com/pdfs/' . $pdfName;
+    $serverUrl = 'http://calderon.byethost7.com//pdfs/' . $pdfName;
+    $serverUrl = '../pdfs/' . $pdfName;
+
+    // Crear el mensaje de WhatsApp con el enlace del PDF
+    $whatsappUrl = 'https://wa.me/?text=' . urlencode('Hola, aquí tienes el documento asignado: ' . $serverUrl);
+
+    // Redireccionar al usuario al enlace de WhatsApp
+    header('Location: ' . $whatsappUrl);
+    
+    // Eliminar el archivo PDF del servidor después de redireccionar
+    if (file_exists($pdfPath)) {
+        unlink($pdfPath); // Borrar el archivo PDF del servidor
+    }
+    // Cerrar la conexión a la base de datos
+$conn->close();
+    exit;
+
+
+//$pdf->Output('D', 'document.pdf');
 } else {
     echo "Solicitud no válida.";
 }

@@ -14,7 +14,9 @@
     <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet">	
+	<link href="../css/style.css" rel="stylesheet">
+    
+
 	
 	 <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
