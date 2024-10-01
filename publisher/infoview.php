@@ -41,11 +41,9 @@ WHERE assignment.id_assignment = '$id_assignment'");
                 <thead>
 				<tr><th>Ver</th>
                         <th>Nombre</th>
-						<th>Tipo de sordera</th>
 						<th>Sector</th>
 						<th>Territorio</th>
                         <th>Dirección</th>
-						<th>Edad</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,7 +60,6 @@ WHERE assignment.id_assignment = '$id_assignment'");
 							<tr>
 								<TD><a class="btn btn-success" href="viewhouseholder.php<?php echo '?id='.$cqrow['id_householder']; ?>"><i class="fa fa-file"></i></a></TD>
 								<td><?php echo $cqrow['name'].' '. $cqrow['last_name']; ?></td>
-								<td><?php echo $cqrow['sordera']; ?></td>
 								<td><?php  $id_sector=$cqrow['id_sector']; 
 											$sname=mysqli_query($conn,"select sector_name from sector where id_sector='$id_sector'");
 											$sectorname=mysqli_fetch_array($sname);
@@ -76,26 +73,6 @@ WHERE assignment.id_assignment = '$id_assignment'");
 									?>
 								</td>
 								<td><?php echo $cqrow['direccion']; ?></td>
-								<td><?php
-								$fecha = $cqrow['date_birth'];
-								if(!empty($fecha)){
-									echo $nowfecha = date("Y")-$fecha;
-									 /*
-									list($ano,$mes,$dia) = explode("-",$fecha);
-										 $ano_diferencia  = date("Y") - $ano;
-										 $mes_diferencia = date("m") - $mes;
-										 $dia_diferencia   = date("d") - $dia;
-										 if ($dia_diferencia < 0 || $mes_diferencia <= 0){
-										   $ano_diferencia--;
-										   echo $ano_diferencia;
-										 }elseif($dia_diferencia > 0 || $mes_diferencia > 0){
-											echo $ano_diferencia;
-										}*/ 
-									}else{
-										echo 'Falta agregar el año';
-									}    
-										 
-								 ?></td>
 							</tr>
 						<?php
 						}

@@ -24,17 +24,6 @@
                             <a href="index.php"><i class="fa fa-home fa-fw"></i> Inicio</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Amos de Casa<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="householder.php"> <i class="fa fa-user-plus"></i> Sordos</a>
-                                </li>
-                                <li>
-                                    <a href="study.php"> <i class="fa fa-user-plus"></i> Estudia con</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-users fa-fw"></i> Asignación Territorios<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>

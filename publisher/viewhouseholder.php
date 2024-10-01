@@ -48,21 +48,6 @@
         				<span><?php echo $rowsql['codigo']; ?></span>
         			</div>
         		</div>
-        		<div class="col-lg-12">
-					<div class="col-lg-6">
-        				<label>Edad:</label>
-        				<span><?php $fecha = $rowsql['date_birth'];
-									$ano = explode("-", $fecha)[0]; // Obtén solo el año de la fecha de nacimiento
-									$ano_actual = date("Y"); // Obtén el año actual
-									$edad = $ano_actual - $ano; // Calcula la edad
-									echo $edad; ?>
-						</span>
-        			</div>
-					<div class="col-lg-6">	
-        				<label>Teléfono:</label>
-        				<span><?php echo $rowsql['phone']; ?></span>
-        			</div>
-        		</div>
                 <div class="col-lg-12">
 					<div class="col-lg-4">
         				<label>Sector:</label>
@@ -92,26 +77,6 @@
         				<span><?php echo $rowsql['direccion']; ?></span>
         			</div>
                 </div>
-        		<div class="col-lg-12">
-					<div class="col-lg-6">	
-        				<label>Tipo de Sordera:</label>
-        				<span><?php echo $rowsql['sordera']; ?></span>
-        			</div>
-					<div class="col-lg-6">	
-        				<label>Sabe Señas:</label>
-        				<span><?php echo $rowsql['sign_language']; ?></span>
-        			</div>
-        		</div>
-        		<div class="col-lg-12">
-					<div class="col-lg-3">	
-        				<label>Lee:</label>
-        				<span><?php echo $rowsql['lee']; ?></span>
-        			</div>
-					<div class="col-lg-3">	
-        				<label>Vocaliza:</label>
-        				<span><?php echo $rowsql['vocalize']; ?></span>
-        			</div>
-        		</div>
         		<div class="col-lg-12">
 					<div class="col-lg-6">
                         <label>Estudia con:</label>
