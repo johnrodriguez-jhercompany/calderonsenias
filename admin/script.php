@@ -224,30 +224,34 @@
         });
     }); 
 
-    /*** Territorio con variable del sector para escoger territorio en edicion */
-    $(document).ready(function(){
-        $('#sectoredit').change(function(){
-            var id_sector = $(this).val();
+/*** Territorio con variable del sector para escoger territorio en edicion */
+$(document).ready(function(){
 
-            if (id_sector != '') {
-                $.ajax({
-                    url: 'get_territorios.php',
-                    method: 'POST',
-                    data: {id_sector: id_sector},
-                    dataType: 'json',
-                    success: function(data) {
-                        var options = '<option value="">Seleccione un Territorio</option>';
-                        $.each(data, function(key, value){
-                            options += '<option value="'+ value.id_territorio +'">'+ value.territorio_name +'</option>';
-                        });
-                        $('#territorioedit').html(options);
-                    }
+
+    // Delegar el evento 'change' para el select #sectoredit dentro del modal
+    $(document).on('change', '#sectoredit', function(){
+        var id_sector = $(this).val();
+		
+        $.ajax({
+            url: 'get_territorios.php',
+            method: 'POST',
+            data: {id_sector: id_sector},
+            dataType: 'json',
+            success: function(data) {
+                var options = '<option value="">Seleccione un Territorio</option>';
+                $.each(data, function(key, value){
+                    options += '<option value="'+ value.id_territorio +'">'+ value.territorio_name +'</option>';
                 });
-            } else {
-                $('#territorioedit').html('<option value="">Seleccione un Sector primero</option>');
+                $('#territorioedit').html(options);
+            },
+            error: function(xhr, status, error) {
+                console.log("Error en la petición AJAX: " + error);
+                $('#territorioedit').html('<option value="">Error al cargar territorios</option>');
             }
         });
-    }); 
+    });
+});
+
 
         /*** Territorio con variable del sector para escoger territorio en edicion en assigment.php */
         $(document).ready(function(){
