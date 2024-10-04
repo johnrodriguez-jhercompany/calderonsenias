@@ -36,11 +36,11 @@
             <table width="100%" class="table table-striped table-bordered table-hover" id="houseTable">
                 <thead>
                     <tr><th>Ver</th>
+						<th>Codigo</th>
                         <th>Nombre</th>
 						<th>Tipo de sordera</th>
 						<th>Sector</th>
 						<th>Territorio</th>
-						<th>Edad</th>
 						<th>Action</th>
                     </tr>
                 </thead>
@@ -53,6 +53,7 @@
 					?>
 						<tr>
 							<TD><a class="btn btn-success" href="view.php<?php echo '?id='.$cqrow['id_householder']; ?>"><i class="fa fa-file"></i></a></TD>
+							<td><?php echo $cqrow['codigo']; ?></td>
 							<td><?php echo $cqrow['name'].' '. $cqrow['last_name']; ?></td>
 							<td><?php echo $cqrow['sordera']; ?></td>
 							<td><?php  $id_sector=$cqrow['id_sector']; 
@@ -67,26 +68,6 @@
 										echo $territorioname['territorio_name'];
 								?>
 							</td>
-							<td><?php
-							$fecha = $cqrow['date_birth'];
-							if(!empty($fecha)){
-								echo $nowfecha = date("Y")-$fecha;
-							 	/*
-								list($ano,$mes,$dia) = explode("-",$fecha);
- 									$ano_diferencia  = date("Y") - $ano;
- 									$mes_diferencia = date("m") - $mes;
- 									$dia_diferencia   = date("d") - $dia;
- 									if ($dia_diferencia < 0 || $mes_diferencia <= 0){
- 									  $ano_diferencia--;
- 									  echo $ano_diferencia;
- 									}elseif($dia_diferencia > 0 || $mes_diferencia > 0){
-                                        echo $ano_diferencia;
-                                    }*/ 
-                                }else{
-									echo 'Falta agregar el año';
-								}    
- 									
-							 ?></td>
 							<td>
 								<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit_<?php echo $cqrow['id_householder']; ?>"><i class="fa fa-edit"></i></button>
 								<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#del_<?php echo $cqrow['id_householder']; ?>"><i class="fa fa-trash"></i></button>
