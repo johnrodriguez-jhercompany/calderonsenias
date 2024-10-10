@@ -35,21 +35,17 @@
         	
         	<div class="col-lg-9 information">
         		<div class="col-lg-12">
-        			<div class="col-lg-4">	
+        			<div class="col-lg-6">	
         				<label>Nombre:</label>
         				<span><?php echo $rowsql['name']; ?></span>
         			</div>
-        			<div class="col-lg-4">
+        			<div class="col-lg-6">
         				<label>Apellido:</label>
         				<span><?php echo $rowsql['last_name']; ?></span>
         			</div>
-					<div class="col-lg-4">
-        				<label>Territorio #:</label>
-        				<span><?php echo $rowsql['codigo']; ?></span>
-        			</div>
         		</div>
                 <div class="col-lg-12">
-					<div class="col-lg-4">
+					<div class="col-lg-6">
         				<label>Sector:</label>
         				<span><?php  // Incluir el archivo de conexión
 									//include '../conn.php';
@@ -73,12 +69,17 @@
 						</span>
         			</div>
 					<div class="col-lg-6">
-        				<label>Dirección:</label>
-        				<span><?php echo $rowsql['direccion']; ?></span>
+        				<label>Territorio #:</label>
+        				<span><?php echo $rowsql['codigo']; ?></span>
         			</div>
                 </div>
         		<div class="col-lg-12">
 					<div class="col-lg-6">
+        				<label>Dirección:</label>
+        				<span><?php echo $rowsql['direccion']; ?></span>
+        			</div>
+        		</div>
+        		<div class="col-lg-12">
                         <label>Estudia con:</label>
                         <span><?php 
 								// Obtener el id_householder desde los resultados de otra consulta
@@ -107,7 +108,6 @@
 								$stmt2->close();
 							  ?>
 						</span>
-                    </div>
         		</div>
 				<div class="col-lg-12">
 					<div class="col-lg-12">

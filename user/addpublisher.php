@@ -19,10 +19,12 @@
 
 	mysqli_query($conn,"insert into log (id_user, date_change, change_bd) values ('$id_user', '$date_change', '" . $id_change . " PublicadorAdd')");
 	
-	?>
-		<script>
-			window.alert('Publicador Agregado!');
+	//header('location:publisher.php');
+
+	echo "<script>
+			window.alert('Usuario Editado!');
 			window.history.back();
-		</script>
-	<?php
-?>
+		</script>";
+
+	?>
+
