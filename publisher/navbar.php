@@ -31,6 +31,9 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="territory.php"> <i class="fa fa-map"></i> Territorio</a>
+                        </li>
 						<li><a href="#logout" data-toggle="modal"><i class="fa fa-sign-out fa-fw"></i> Salir</a></li>
                     </ul>
                 </div>
