@@ -60,6 +60,9 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="informe.php"> <i class="fa fa-map"></i> Informe</a>
+                        </li>
+                        <li>
                             <a href="visit.php"> <i class="fa fa-history"></i> Visitas</a>
                         </li>
                         <li>

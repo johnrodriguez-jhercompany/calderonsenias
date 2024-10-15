@@ -39,11 +39,11 @@ while ($row = $result->fetch_assoc()) {
     // Añadir los datos de la fila como una tabla
     $pdf->Cell(130, 8, 'Nombre Completo: ', 1, 0,'C');
     $pdf->Cell(50, 8, 'Territorio #: ', 1, 1,'C');
-    $pdf->Cell(130, 8, $row['namehouseholder'] .' '.$row['householderlast'], 1, 0,'C');
-    $pdf->Cell(50, 8, $row['codigo'], 1, 1,'C');
+    $pdf->Cell(130, 8, utf8_decode($row['namehouseholder'] .' '.$row['householderlast']), 1, 0,'C');
+    $pdf->Cell(50, 8, utf8_decode($row['codigo']), 1, 1,'C');
     $pdf->Cell(90, 8, 'Sector: ', 1, 0,'C');
     $pdf->Cell(90, 8, utf8_decode('Dirección exacta: '), 1, 1,'C');
-    $pdf->Cell(90, 16, $row['sector_name'], 1, 0,'C');
+    $pdf->Cell(90, 16, utf8_decode($row['sector_name']), 1, 0,'C');
 
     // Crear una celda fija de 16 para la dirección
     $x = $pdf->GetX(); // Guardar la posición actual X
@@ -66,9 +66,9 @@ while ($row = $result->fetch_assoc()) {
     $pdf->Cell(120, 8, 'Estudia con: ', 1, 0,'C');
     $pdf->Cell(60, 8, utf8_decode('Código QR: '), 1, 1,'C');
     
-    $pdf->Cell(120, 8, $row['username'] .' '.$row['lastnameuser'], 1, 1,'C');
+    $pdf->Cell(120, 8, utf8_decode($row['username'] .' '.$row['lastnameuser']), 1, 1,'C');
     $pdf->Cell(120, 8, utf8_decode('Información Adicional: '), 1, 1,'C');
-    $pdf->Cell(120, 15, $row['observation'], 1, 1,'C');
+    $pdf->Cell(120, 15, utf8_decode($row['observation']), 1, 1,'C');
 
     // Posicionar la imagen debajo del código QR
     $yPosition = $pdf->GetY()-30; // Ajusta el valor para controlar la distancia entre la celda y la imagen

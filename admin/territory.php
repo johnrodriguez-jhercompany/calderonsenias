@@ -9,7 +9,10 @@
 <div style="height:40px;"></div>
 	
 	<div class="col-lg-12">
-		<h1>Pronto aun en desarrollo</h1>
+		<h1>Mapa Global de Sordos</h1>
+	</div>
+	<div>
+	<iframe src="https://www.google.com/maps/d/u/0/embed?mid=148pboAUvqxzg_eW8iAMNJRHKB-xcFb4&ehbc=2E312F&noprof=1" width="980" height="520"></iframe>
 	</div>
 </div>
 </div>
