@@ -42,7 +42,7 @@
 
     // Filtro por Sector
     $('#sectorFilter').on('change', function() {
-        table.column(3).search(this.value).draw();  // La columna 3 es la del sector
+        table.column(4).search(this.value).draw();  // La columna 3 es la del sector
     });
 
 
